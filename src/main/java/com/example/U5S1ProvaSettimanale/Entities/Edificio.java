@@ -11,12 +11,13 @@ import jakarta.persistence.OneToMany;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
-
+@ToString
 public class Edificio {
 	
 	@Id
@@ -36,13 +37,6 @@ public class Edificio {
 		this.citta = citta;
 	}
 
-	@Override
-	public String toString() {
-		return "Edificio [nome=" + nome + ", indirizzo=" + indirizzo + ", citta=" + citta + ", postazione=" + postazione
-				+ "]";
+	
 	}
 	
-	
-	
-
-}

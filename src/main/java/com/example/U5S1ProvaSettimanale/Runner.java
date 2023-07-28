@@ -47,6 +47,8 @@ public class Runner implements CommandLineRunner {
 		postazioneDao.savePostazione(postazione01);
 		prenotazioneDao.savePrenotazione(prenotazione01);
 		
+		postazioneDao.findPostazioneByTipoAndCitta(TipoPostazione.OPENSPACE, "Bologna");
+		
 	}
 
 }

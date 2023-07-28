@@ -9,11 +9,13 @@ import jakarta.persistence.OneToMany;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
+@ToString
 public class User {
 	
 	@Id
@@ -32,16 +34,6 @@ public class User {
 		this.cognome = cognome;
 		this.email = email;
 	}
-
-	@Override
-	public String toString() {
-		return "User [nome=" + nome + ", cognome=" + cognome + ", email=" + email + ", prenotazione=" + prenotazione
-				+ "]";
-	}
-	
-	
-	
-	
 	
 
 }

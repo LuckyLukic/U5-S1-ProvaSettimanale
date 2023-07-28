@@ -12,11 +12,13 @@ import jakarta.persistence.OneToOne;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
+@ToString
 
 public class Postazione {
 	
@@ -45,17 +47,5 @@ public class Postazione {
 		this.edificio = edificio;
 	}
 
-	@Override
-	public String toString() {
-		return "Postazione [descrizione=" + descrizione + ", tipoPostazione=" + tipoPostazione + ", numeroOccupanti="
-				+ numeroOccupanti + ", edificio=" + edificio + ", prenotazione="
-				+ prenotazione + "]";
-	}
-	
-	
-	
-	
-	
-	
 
 }

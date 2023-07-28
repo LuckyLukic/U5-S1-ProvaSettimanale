@@ -10,11 +10,13 @@ import jakarta.persistence.OneToOne;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
+@ToString
 
 public class Prenotazione {
 	
@@ -35,15 +37,6 @@ public class Prenotazione {
 		this.dataPrenotazione = dataPrenotazione;
 		this.postazione = postazione;
 		this.utente = utente;
-	}
-
-	@Override
-	public String toString() {
-		return "Prenotazione [dataPrenotazione=" + dataPrenotazione + ", postazione=" + postazione + ", utente="
-				+ utente + "]";
-	}
-	
-	
-	
+	}	
 
 }
