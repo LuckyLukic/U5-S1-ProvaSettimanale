@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import com.example.U5S1ProvaSettimanale.Entities.User;
 
 @Service
-public class ServiceUser implements UserDAO {
+public class UserService implements UserDAO {
 	
 	@Autowired
 	private UserRepo userRepo;
@@ -15,7 +15,7 @@ public class ServiceUser implements UserDAO {
 	public void saveUser(User utente) {
 		
 		   userRepo.save(utente);
-	        System.out.println((utente.getNome() + " " + utente.getCognome() + "salvato!"));
+	        System.out.println((utente.getNome() + " " + utente.getCognome() + " " + "salvato!"));
 		
 	}
 
