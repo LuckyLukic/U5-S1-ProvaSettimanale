@@ -2,9 +2,12 @@ package com.example.U5S1ProvaSettimanale.Entities;
 
 
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -22,6 +25,9 @@ public class Edificio {
 	private String nome;
 	private String indirizzo;
 	private String citta;
+	
+	@OneToMany(mappedBy = "edificio")
+	List <Postazione> postazione;
 	
 	public Edificio(String nome, String indirizzo, String citta) {
 	
