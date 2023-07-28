@@ -47,7 +47,25 @@ public class Runner implements CommandLineRunner {
 		postazioneDao.savePostazione(postazione01);
 		prenotazioneDao.savePrenotazione(prenotazione01);
 		
-		postazioneDao.findPostazioneByTipoAndCitta(TipoPostazione.OPENSPACE, "Bologna");
+		try {
+	        Prenotazione prenotazione1 = new Prenotazione(LocalDate.of(2023, 8, 02), postazione01, utente01);
+	        if(prenotazioneDao.controlloDataPostazione(prenotazione1.getPostazione(), prenotazione1.getDataPrenotazione())){
+	            System.out.println("Postazione già prenotata");
+	        } else {
+	            if(prenotazioneDao.controlloDataUtente(prenotazione1.getUtente(), prenotazione1.getDataPrenotazione())){
+	                System.out.println("Postazione già prenotata dall'utente");
+	            } else {
+	                prenotazioneDao.savePrenotazione(prenotazione1);
+	            }
+	        }
+	        }catch (Exception e) {
+	            e.printStackTrace();
+	            System.out.println("Errore durante la creazione della prenotazione");
+	        }
+		
+		
+		// NON CAPISCO PERCHE'MI DIA QUESTO ERRORE : java.lang.IllegalStateException: Failed to execute CommandLineRunner
+		//postazioneDao.findPostazioneByTipoAndCitta(TipoPostazione.OPENSPACE, "Bologna");
 		
 	}
 
