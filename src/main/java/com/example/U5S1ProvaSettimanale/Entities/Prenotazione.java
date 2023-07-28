@@ -36,6 +36,12 @@ public class Prenotazione {
 		this.postazione = postazione;
 		this.utente = utente;
 	}
+
+	@Override
+	public String toString() {
+		return "Prenotazione [dataPrenotazione=" + dataPrenotazione + ", postazione=" + postazione + ", utente="
+				+ utente + "]";
+	}
 	
 	
 	

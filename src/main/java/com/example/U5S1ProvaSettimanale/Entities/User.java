@@ -32,6 +32,14 @@ public class User {
 		this.cognome = cognome;
 		this.email = email;
 	}
+
+	@Override
+	public String toString() {
+		return "User [nome=" + nome + ", cognome=" + cognome + ", email=" + email + ", prenotazione=" + prenotazione
+				+ "]";
+	}
+	
+	
 	
 	
 	
