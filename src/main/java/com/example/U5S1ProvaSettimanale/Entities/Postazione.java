@@ -33,24 +33,22 @@ public class Postazione {
 	
 	@ManyToOne
 	private Edificio edificio;
-	
 	@OneToOne (mappedBy = "postazione")
 	private Prenotazione prenotazione;
 	
-	public Postazione(String descrizione, TipoPostazione tipoPostazione, int numeroOccupanti, Boolean disponibilita,
+	public Postazione(String descrizione, TipoPostazione tipoPostazione, int numeroOccupanti,
 			Edificio edificio) {
 		
 		this.descrizione = descrizione;
 		this.tipoPostazione = tipoPostazione;
 		this.numeroOccupanti = numeroOccupanti;
-		this.disponibilita = disponibilita;
 		this.edificio = edificio;
 	}
 
 	@Override
 	public String toString() {
 		return "Postazione [descrizione=" + descrizione + ", tipoPostazione=" + tipoPostazione + ", numeroOccupanti="
-				+ numeroOccupanti + ", disponibilita=" + disponibilita + ", edificio=" + edificio + ", prenotazione="
+				+ numeroOccupanti + ", edificio=" + edificio + ", prenotazione="
 				+ prenotazione + "]";
 	}
 	
