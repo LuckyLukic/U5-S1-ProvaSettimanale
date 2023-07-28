@@ -1,5 +1,7 @@
 package com.example.U5S1ProvaSettimanale.Entities;
 
+
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -11,20 +13,21 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class User {
+
+public class Edificio {
 	
 	@Id
 	@GeneratedValue
 	private int id;
 	private String nome;
-	private String cognome;
-	private String email;
+	private String indirizzo;
+	private String citta;
 	
-	public User(String nome, String cognome, String email) {
+	public Edificio(String nome, String indirizzo, String citta) {
 	
 		this.nome = nome;
-		this.cognome = cognome;
-		this.email = email;
+		this.indirizzo = indirizzo;
+		this.citta = citta;
 	}
 	
 	

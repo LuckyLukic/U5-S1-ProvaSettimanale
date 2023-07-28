@@ -3,6 +3,7 @@ package com.example.U5S1ProvaSettimanale.Entities;
 import com.example.U5S1ProvaSettimanale.Services.TipoPostazione;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -22,7 +23,7 @@ public class Postazione {
 	private int id;
 	private String descrizione;
 	
-	@Enumerated(Enum Type.STRING)
+	@Enumerated(EnumType.STRING)
 	private TipoPostazione tipoPostazione;
 	
 	private int numeroOccupanti;
